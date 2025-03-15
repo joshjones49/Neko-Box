@@ -1,9 +1,47 @@
 #navbar {
     background-color: #333;
     height: 50px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
 }
 
 .neko {
     color: orangered;
     font-size: 40px;
 }
+
+.nav-divs {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-div {
+    display: flex;
+    justify-content: start;
+}
+
+.left-div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    border: none;
+    color: white;
+}
+
+.left-div > div:hover {
+    background-color: black;
+}
+
+.left-div > div > h1 {
+    color: white;
+    font-style: italic;
+    font-size: 100%;
+}
+
