@@ -1,14 +1,19 @@
 #navbar {
     background-color: #333;
     height: 50px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     color: white;
+    border-bottom: 1px solid white;
+    position: fixed;
+    z-index: 1000;
+
 }
 
 .neko {
     color: orangered;
-    font-size: 40px;
+    font-size: 120%;
 }
 
 .nav-divs {
@@ -17,6 +22,8 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 .left-div {
     display: flex;
@@ -30,9 +37,8 @@
     height: 100%;
     width: 20%;
     cursor: pointer;
-    transition: .5s ease-in-out;
     border: none;
-    color: white;
+    transition: .5s ease-in-out;
 }
 
 .left-div > div:hover {
@@ -40,8 +46,54 @@
 }
 
 .left-div > div > h1 {
-    color: white;
     font-style: italic;
-    font-size: 100%;
+    font-size: 120%;
 }
 
+.left-div > div > h3 {
+    font-size: 120%;
+}
+/* ================================== */
+.right-div {
+    display: flex;
+    justify-content: end;
+}
+
+.right-div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 25%;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.right-div > div:hover {
+    background-color: black;
+}
+
+.right-div > div > input {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+}
+
+.right-div > div > input:focus {
+    outline: none;
+}
+
+.search-div {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    font-size: 160%;
+    color: white;
+}
