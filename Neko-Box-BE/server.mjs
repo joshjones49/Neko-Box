@@ -36,7 +36,22 @@ app.get('/', async (req, res) => {
     }
 });
 
+// get shows by category
+app.get('/categories', async (req, res) => {
+    try {
+        const result = await pool.query(
+            "SELECT name, quality_rating FROM shows"
+        );
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: error.message});
+    }
+})
 
+
+
+// get shows by name
 
 // LISTENER
 app.listen(PORT, () => {
