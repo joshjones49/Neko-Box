@@ -40,7 +40,7 @@ app.get('/', async (req, res) => {
 app.get('/categories', async (req, res) => {
     try {
         const result = await pool.query(
-            "SELECT name, quality_rating FROM shows"
+            "SELECT name, quality_rating FROM shows ORDER BY quality_rating DESC"
         );
         res.status(200).json(result.rows);
     } catch (error) {
