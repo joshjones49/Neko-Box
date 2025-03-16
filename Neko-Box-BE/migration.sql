@@ -5,11 +5,11 @@ CREATE TABLE shows (
     name VARCHAR(255),
     category VARCHAR(255),
     description TEXT,
-    viewer_rating VARCHAR(255),
-    quality_rating INTEGER
+    audience VARCHAR(255),
+    rating INTEGER
 );
 
-INSERT INTO shows (name, category, description, viewer_rating, quality_rating) VALUES
+INSERT INTO shows (name, category, description, audience, rating) VALUES
 
 ('Berserk', 'Seinen', 'DESCRIPTION', 'Mature', 5),
 

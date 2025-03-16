@@ -13,10 +13,6 @@ const Main = () => {
     getShows(setShows, shows)
   }, []);
 
-  useEffect(() => {
-    console.log(shows)
-  }, []);
-
   return (
     <div className='main' >
 
@@ -24,8 +20,8 @@ const Main = () => {
         <div key={show.id} className='show'>
           <h1>{show.name}</h1>
           <h3>{show.description}</h3>
-          <h3>{show.quality_rating}</h3>
-          <h3>{show.viewer_rating}</h3>
+          <h3>{show.rating}</h3>
+          <h3>{show.audience}</h3>
           <h3>{show.category}</h3>
         </div>
       ))}
