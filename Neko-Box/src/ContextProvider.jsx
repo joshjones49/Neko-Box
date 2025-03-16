@@ -1,13 +1,34 @@
 import React, {useState} from 'react';
+import toast, {Toaster} from 'react-hot-toast'
 export const Context = React.createContext();
 
 const NekoContextProvider = ({children}) => {
-    const url = 'http://localhost:8008'
+    const url = 'http://localhost:8008';
+    let data;
+
+    // STATE
+    const [shows, setShows] = useState([]);
+
+    //GET FUNCTIONS
+    const getShows = async (setElem, elem) => {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            const data = await res.json();
+            setElem(data)
+            console.log(elem)
+        } catch (error) {
+            toast.error(error.message)
+            console.log(error)
+        }
+    }
 
 
     return (
         <Context.Provider value={{
-            
+            shows, setShows, getShows
         }}>
             {children}
         </Context.Provider>
