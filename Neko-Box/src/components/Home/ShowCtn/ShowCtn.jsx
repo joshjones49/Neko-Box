@@ -1,7 +1,7 @@
 import './ShowCtn.css'
 import React from 'react'
 import { useEffect, useContext } from 'react'
-import {Context} from '../../ContextProvider'
+import {Context} from '../../../ContextProvider'
 import { Link } from "react-router-dom";
 
 const ShowCtn = () => {
@@ -19,12 +19,9 @@ const ShowCtn = () => {
 
       {shows.map(show => (
         <Link to='/show-details' className='show show-link' key={show.id}>
-          <div>
+          <div onMouseOver={() => console.log(show.description)}>
             <h1>{show.name}</h1>
-            <h3>{show.description}</h3>
             <h3>{show.rating}</h3>
-            <h3>{show.audience}</h3>
-            <h3>{show.category}</h3>
           </div>
         </Link>
       ))}

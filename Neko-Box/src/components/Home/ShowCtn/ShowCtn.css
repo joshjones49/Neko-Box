@@ -27,3 +27,8 @@
     transform: scale(1.2);
     z-index: 10;
 }
+
+.show-link {
+    text-decoration: none;
+    text-align: center;
+}

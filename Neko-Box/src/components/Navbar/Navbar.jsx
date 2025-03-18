@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import { SiGnuicecat } from "react-icons/si";
 import { FaSearch } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,7 +10,9 @@ const Navbar = () => {
       <div className='nav-divs left-div' >
         <div>
           <SiGnuicecat className='neko'/>
-          <h1>Neko Box</h1>
+          <Link to='/' className='home-link link'>
+            <h1>Neko Box</h1>
+          </Link>
         </div>
         <div><h3>New</h3></div>
         <div><h3>Popular</h3></div>
