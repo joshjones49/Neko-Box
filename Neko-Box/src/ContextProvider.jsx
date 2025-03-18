@@ -18,7 +18,7 @@ const NekoContextProvider = ({children}) => {
             }
             const data = await res.json();
             setShows(data)
-            console.log(elem)
+            console.log(shows)
         } catch (error) {
             toast.error(error.message)
             console.log(error)

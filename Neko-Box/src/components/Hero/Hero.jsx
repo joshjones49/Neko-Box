@@ -1,10 +1,10 @@
-import './Carousel.css'
+import './Hero.css'
 import React from 'react'
 import { SiGnuicecat } from "react-icons/si"
 
-const Carousel = () => {
+const Hero = () => {
   return (
-    <div className='carousel' >
+    <div className='hero' >
       <div>
         <div>
         <SiGnuicecat className='neko'/>
@@ -16,4 +16,4 @@ const Carousel = () => {
   )
 }
 
-export default Carousel
+export default Hero

@@ -20,6 +20,7 @@ const Navbar = () => {
           <FaSearch className='search'/>
         </div>
         <div><h3>Watchlist</h3></div>
+        <div><h3>Login / Register</h3></div>
       </div>
     </div>
   )

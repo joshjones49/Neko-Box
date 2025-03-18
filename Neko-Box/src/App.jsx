@@ -1,17 +1,18 @@
-import { useState, useEffect, useContext } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+
 import Navbar from './components/Navbar/Navbar'
-import Carousel from './components/Carousel/Carousel.jsx'
-import Main from './components/Main/Main.jsx'
-import { Context } from './ContextProvider.jsx'
+import Home from './components/Home/Home'
+
+import './App.css'
 
 function App() {
 
   return (
-    <div id="app" >
+    <div className="app" >
       <Navbar />
-      <Carousel />
-      <Main />   
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>  
     </div>
   )
 }
