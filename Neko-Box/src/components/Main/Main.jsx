@@ -10,7 +10,7 @@ const Main = () => {
   } = useContext(Context);
 
   useEffect(() => {
-    getShows(setShows, shows)
+    getShows()
   }, []);
 
   return (
