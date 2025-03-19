@@ -3,11 +3,13 @@ import React from 'react'
 import { useEffect, useContext } from 'react'
 import {Context} from '../../../ContextProvider'
 import { Link } from "react-router-dom";
+import { IoBookmark } from "react-icons/io5";
 
 const ShowCtn = () => {
 
   const {
-    getShows, shows, setShows
+    getShows, shows,
+    currentShow
   } = useContext(Context);
 
   useEffect(() => {
@@ -17,13 +19,14 @@ const ShowCtn = () => {
   return (
     <div className='show-ctn' >
 
-      {shows.map(show => (
-        <Link to='/show-details' className='show show-link' key={show.id}>
-          <div onMouseOver={() => console.log(show.description)}>
-            <h1>{show.name}</h1>
+      {shows.map(show => (   
+          <div className='show' key={show.id} >
+            <Link to='/show-details' className='show-link'>
+              <h1>{show.name}</h1>
+            </Link>
             <h3>{show.rating}</h3>
+            <IoBookmark className='bookmark' onClick={() => console.log('Saved '+show.name+' to watchlist!')} />
           </div>
-        </Link>
       ))}
 
     </div>

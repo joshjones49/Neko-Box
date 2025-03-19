@@ -25,6 +25,14 @@ const NekoContextProvider = ({children}) => {
         }
     }
 
+    const getShowDetails = () => {
+        try {
+
+        } catch (error) {
+            
+        }
+    }
+
 
     return (
         <Context.Provider value={{

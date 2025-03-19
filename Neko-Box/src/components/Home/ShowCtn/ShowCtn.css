@@ -16,6 +16,7 @@
     height: 45%;
     width: 15%;
     border: 1px solid white;
+    border-radius: 10px;
     color: white;
     margin: 1.5%;
     cursor: pointer;
@@ -31,4 +32,9 @@
 .show-link {
     text-decoration: none;
     text-align: center;
+    color: white;
+}
+
+.bookmark {
+    font-size: 200%;
 }

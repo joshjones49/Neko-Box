@@ -52,6 +52,18 @@ app.get('/categories', async (req, res) => {
 
 
 // get shows by name
+app.get('/show-details/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const result = await pool.query(
+            "SELECT * FROM shows WHERE id = $1", [id]
+        );
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: error.message});
+    }
+})
 
 // LISTENER
 app.listen(PORT, () => {
