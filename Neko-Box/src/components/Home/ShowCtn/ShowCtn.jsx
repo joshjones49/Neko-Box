@@ -8,8 +8,7 @@ import { IoBookmark } from "react-icons/io5";
 const ShowCtn = () => {
 
   const {
-    getShows, shows,
-    currentShow
+    getShows, shows
   } = useContext(Context);
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const ShowCtn = () => {
 
       {shows.map(show => (   
           <div className='show' key={show.id} >
-            <Link to='/show-details' className='show-link'>
+            <Link to={`/show-details/${show.id}`} className='show-link'>
               <h1>{show.name}</h1>
             </Link>
             <h3>{show.rating}</h3>
